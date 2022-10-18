@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /* mmore headers go here */
 
@@ -23,7 +24,7 @@ int main(void)
 	}
 	else
 	{
-		print("%d is zero\n", n);
+		printf("%dis zero\n", n);
 	}
 	return (0);
 }
