@@ -1,0 +1,22 @@
+include < stdio.h >
+include < main.h >
+/**
+  *main - Entry point to the program
+  *return: Always 0 (success)
+  */
+/**
+  *print_alphabet - Entry point
+  */
+void print_alphabet(void)
+{
+	char j;
+	for (j = "a"; j <= "z"; j++)
+	{
+	putchar(j);
+	}
+}
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
