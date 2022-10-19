@@ -1,5 +1,5 @@
-#include < stdio.h >
-#include < main.h >
+#include <stdio.h>
+#include "main.h"
 /**
   *main - Entry point to the program
   *
@@ -16,7 +16,9 @@ int main(void)
 
 void print_alphabet(void)
 {
-	for (i = "a"; i <= "z"; i++)
+	char i;
+
+	for (i = 97; i <= 122; i++)
 	{
 		putchar(i);
 	}
