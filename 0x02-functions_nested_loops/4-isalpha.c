@@ -9,7 +9,7 @@ int _isalpha(int c)
 {
 	while ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		return (0);
+		return (1);
 		_putchar(10);
 	}
 	return (0);
