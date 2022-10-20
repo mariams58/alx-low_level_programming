@@ -1,7 +1,7 @@
 #include "main.h"
 /**
   * print_sign - prints the signs of a number
-  * @n: first parameterto check case
+  * @n: first parameter to check case
   *
   * Return: Always 0 (success)
   */
@@ -9,18 +9,18 @@ int print_sign(int n)
 {
 	if (n < 0)
 	{
+		_putchar(45);
 		return (-1);
-		_putchar('-');
 	}
 	else if (n == 0)
 	{
+		_putchar(48);
 		return (0);
-		_putchar('0');
 	}
 	else
 	{
-		return (1);
-		_putchar('+');
+		_putchar(43);
+		return (+1);
 	}
 	_putchar(10);
 }
