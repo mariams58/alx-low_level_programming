@@ -9,9 +9,9 @@ int _islower(int c)
 {
 	while ((c >= 97) && (c <= 122))
 	{
-		return(1);
+		return (1);
 		_putchar(10);
 	}
-	return(0);
+	return (0);
 	_putchar(10);
 }
