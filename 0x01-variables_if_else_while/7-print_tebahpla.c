@@ -1,16 +1,14 @@
 #include <stdio.h>
-
 /**
-  * main - prints the alphabets
+  * main - prits alphabest in reverse
   *
-  * Return: Alwya 0
+  * Return: Always 0
   */
-
 int main(void)
 {
-	int i;
+	char i;
 
-	for (i = 97; i < 123; i++)
+	for (i = 'z'; i >= 'a'; i--)
 	{
 		putchar(i);
 	}

@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 /**
-  * main - prints the alphabets
+  * main - print out the numbers of base ten
   *
-  * Return: Alwya 0
+  * Return: Aways 0
   */
-
 int main(void)
 {
 	int i;
 
-	for (i = 97; i < 123; i++)
+	for (i = 48; i <= 57; i++)
 	{
 		putchar(i);
 	}
