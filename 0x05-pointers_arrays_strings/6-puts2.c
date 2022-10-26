@@ -1,11 +1,11 @@
-#inclue "main.h"
+#include "main.h"
 /**
   * puts2- prits every althernate cahracter
   * @str: given str
   *
   * Return: alway 0
   */
-void puts(char *str)
+void puts2(char *str)
 {
 	int i;
 
@@ -15,5 +15,5 @@ void puts(char *str)
 		{
 			_putchar(str[i]);
 		}
-		_putchar(10)
+		_putchar(10);
 	}
