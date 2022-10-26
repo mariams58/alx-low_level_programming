@@ -14,7 +14,7 @@ void rev_string(char *s)
 	{
 		;
 	}
-	for (j= i; i >= s[0]; i--)
+	for (j= i - 1; i >= 0; i--)
 	{
 		_putchar(s[j]);
 	}
