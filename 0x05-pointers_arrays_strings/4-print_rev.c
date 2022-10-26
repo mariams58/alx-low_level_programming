@@ -15,8 +15,9 @@ void print_rev(char *s)
 	{
 		;
 	}
+	j = i
 
-	while (j < s[i])
+	while (j < s[j])
 	{
 		_putchar(j);
 		j--;
