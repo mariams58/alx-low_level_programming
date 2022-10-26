@@ -5,7 +5,7 @@
   *
   * Return: Always 0
   */
-int re_string(char *s)
+int rev_string(char *s)
 {
 	int i;
 	int j;
@@ -17,7 +17,7 @@ int re_string(char *s)
 
 	for (j= i; j <= 0; j--)
 	{
-		_putchar(s[j])
+		_putchar(s[j]);
 	}
 	_putchar(10);
 	return (0);
