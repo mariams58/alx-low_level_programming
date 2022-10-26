@@ -13,9 +13,12 @@ void puts2(char *str)
 	{
 		;
 	}
-	if (i % 2 == 0)
+	while (i - 1 >= 0)
 	{
-		_putchar(str[i]);
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
 	}
 	_putchar(10);
 }
