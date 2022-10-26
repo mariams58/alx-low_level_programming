@@ -8,9 +8,8 @@
 void rev_string(char *s)
 {
 	int i;
-	int j;
 
-	for (i = s[-1]; i <= s[0], i++)
+	for (i = s[-1]; i <= s[0]; i++)
 	{
 		_putchar(s[i]);
 	}
