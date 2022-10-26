@@ -20,5 +20,6 @@ void print_rev(char *s)
 	{
 		_putchar(j);
 		j--;
+	}
 	_putchar(10);
 }
