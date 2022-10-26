@@ -5,7 +5,7 @@
   *
   * Return: Always 0
   */
-int rev_string(char *s)
+void rev_string(char *s)
 {
 	int i;
 	int j;
@@ -20,5 +20,4 @@ int rev_string(char *s)
 		_putchar(s[j]);
 	}
 	_putchar(10);
-	return (0);
 }
