@@ -8,9 +8,11 @@
 int _strlen(char *s)
 {
 	int len;
+	int i;
 
 	for (i = 0, s[len], i++)
 	{
 		return (len);
 	}
+	return(i);
 }
