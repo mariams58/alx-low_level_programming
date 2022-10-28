@@ -13,10 +13,15 @@ void reverse_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		rev[n - 1 - i] = *a[i];
+		rev[(n - 1) - i] = *a[i];
 	}
 	for (i = 0; i <  n; i++)
 	{
 		*a[i] = rev[i];
+		if (i != 0)
+		{
+			_putchar(", ")
+		}
+		_putchar(a[i]);
 	}
 }
