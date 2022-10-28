@@ -16,13 +16,12 @@ char *cap_string(char *str)
 	}
 	for (j = 0; j < i; i++)
 	{
-		if (str[i] >= 97 && str[i] <= 122)
+		while (str[j] <= 47 || str[j] == 63  || str[j] >= 123)
 		{
-			str[i] = str[i] - 32;
-		}
-		else
-		{
-			str[i] = str[i] + 0;
+			if (str[j + 1] >= 65 && str[j + 1] <= 91)
+			{
+				str[j + 1] = str[j + 1] + 32;
+			}
 		}
 	}
 	return (str);
