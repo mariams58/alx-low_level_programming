@@ -14,11 +14,11 @@ char *string_toupper(char *cap)
 	{
 		;
 	}
-	for(j= 0; j <= i; i++)
+	for (j = 0; j <= i; j++)
 	{
-		if ((cap[i] > 96) && (cap[i] < 123))
+		if ((cap[j] > 96) && (cap[j] < 123))
 		{
-			cap[i] = cap[i] - 32;
+			cap[j] = cap[j] - 32;
 		}
 	}
 	return (cap);
