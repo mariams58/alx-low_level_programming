@@ -24,11 +24,11 @@ int _strcmp(char *s1, char *s2)
 	}
 	else if (i > j)
 	{
-		x = i - j;
+		x = 15;
 	}
 	else if (i < j)
 	{
-		x = i - j;
+		x = -15;
 	}
 	return (x);
 }
