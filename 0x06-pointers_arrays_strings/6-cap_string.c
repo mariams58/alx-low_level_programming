@@ -8,21 +8,16 @@
 char *cap_string(char *str)
 {
 	int i;
-	int j;
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		;
-	}
-	for (j = 0; j < i; i++)
-	{
-		while (str[j] <= 47 || str[j] == 63  || str[j] >= 123)
+		while (str[i] <= 47 || str[] == 63  || str[i >= 123)
 		{
-			if (str[j + 1] >= 65 && str[j + 1] <= 91)
+			if (str[i + 1] >= 65 && str[i + 1] <= 91)
 			{
-				str[j + 1] = str[j + 1] + 32;
+				str[i + 1] = str[i + 1] + 32;
 			}
-			j++;
+			i++;
 		}
 	}
 	return (str);

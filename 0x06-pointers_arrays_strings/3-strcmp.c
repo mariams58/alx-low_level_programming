@@ -20,7 +20,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		;
 	}
-	x = s1[i] - s2[j];
+
 	if (i > j)
 	{
 		x = s1[i] - 0;
@@ -29,5 +29,11 @@ int _strcmp(char *s1, char *s2)
 	{
 		x = 0 - s2[j];
 	}
+	else
+	{
+		x = s1[i] - s2[j];
+	}
+	if (i > j)
+
 	return (x);
 }
