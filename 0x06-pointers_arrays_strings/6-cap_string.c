@@ -22,6 +22,7 @@ char *cap_string(char *str)
 			{
 				str[j + 1] = str[j + 1] + 32;
 			}
+			j++;
 		}
 	}
 	return (str);
