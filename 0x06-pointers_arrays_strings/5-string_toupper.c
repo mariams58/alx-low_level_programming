@@ -1,16 +1,25 @@
 #include "main.h"
-/** 
-  *string_to upper - covert srting to upper 
-  * @: given str
+/**
+  *string_toupper - convert srting to upper
+  * @cap: given str
   *
   * Return: char
   */
-char *string_toupper(char *)
+char *string_toupper(char *cap)
 {
-	char *cap;
+	int i;
+	int j;
 
-	for (i = 'a' i <= 'z; i++)
+	for (i = 0; cap[i] != '\0'; i++)
 	{
+		;
+	}
+	for(j= 0; j <= i; i++)
+	{
+		if ((cap[i] > 96) && (cap[i] < 123))
+		{
+			cap[i] = cap[i] - 32;
+		}
 	}
 	return (cap);
 }
