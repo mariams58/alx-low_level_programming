@@ -18,12 +18,5 @@ void reverse_array(int *a, int n)
 		a[i] = a[j];
 		a[j] = rev;
 		j--;
-
-		if (i != 0 && i < n)
-		{
-			_putchar(44);
-			_putchar(32);
-		}
 	}
-	_putchar(a);
 }
