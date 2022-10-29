@@ -24,6 +24,6 @@ void reverse_array(int *a, int n)
 			_putchar(44);
 			_putchar(32);
 		}
-		_putchar(a[i]);
 	}
+	_putchar(a);
 }
