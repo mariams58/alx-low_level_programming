@@ -13,9 +13,9 @@ char *cap_string(char *str)
 	{
 		while (str[i] <= 47 || str[i] == 63  || str[i] >= 123)
 		{
-			if (str[i + 1] >= 65 && str[i + 1] <= 91)
+			if (str[i + 1] >= 97 && str[i + 1] <= 122)
 			{
-				str[i + 1] = str[i + 1] + 32;
+				str[i + 1] = str[i + 1] - 32;
 			}
 			i++;
 		}
