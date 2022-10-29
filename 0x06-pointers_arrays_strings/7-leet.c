@@ -21,5 +21,6 @@ char *leet(char *wrd)
 			}
 		}
 	}
+	return (*wrd);
 
 }
