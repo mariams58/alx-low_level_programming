@@ -19,7 +19,7 @@ int _strcmp(char *s1, char *s2)
 	for (j = 0; s2[j] != 0; j++)
 	{
 		;
-i	}
+	}
 
 	if (i > j)
 	{
@@ -27,7 +27,7 @@ i	}
 	}
 	else if (i < j)
 	{
-		x = 0 - s2[j];
+		x = 30 - s2[j];
 	}
 	else
 	{
