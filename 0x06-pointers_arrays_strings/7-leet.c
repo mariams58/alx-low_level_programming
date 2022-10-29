@@ -17,10 +17,10 @@ char *leet(char *wrd)
 		{
 			if (wrd[i] == letter[j])
 			{
-				word[i] = code[j];
+				wrd[i] = code[j];
 			}
 		}
 	}
-	return (*wrd);
+	return (wrd);
 
 }
