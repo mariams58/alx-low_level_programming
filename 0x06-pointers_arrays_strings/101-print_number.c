@@ -7,4 +7,5 @@
   */
 void print_number(int n)
 {
+	n = '0' + n;
 }
