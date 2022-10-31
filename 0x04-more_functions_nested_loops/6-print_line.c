@@ -16,3 +16,4 @@ void print_line(int n)
 		x++;
 	}
 	_putchar(10);
+}
