@@ -24,3 +24,4 @@ int _isupper(int c)
 		}
 		return (value)
 	}
+}
