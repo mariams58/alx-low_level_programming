@@ -7,9 +7,12 @@
   */
 void print_line(int n)
 {
-	while (n > 0 && n < n + 1)
+	int x;
+
+	x = 0;
+	while (x < n)
 	{
 		_putchar(95);
-		n++;
+		x++;
 	}
 	_putchar(10);
