@@ -12,16 +12,13 @@ int _isupper(int c)
 	int i;
 	int value;
 
-	for (i >= 65; i <= 90; i++)
+	if (c >= 65 && c <= 90)
 	{
-		if (c == i)
-		{
-			value = 1;
-		}
-		else
-		{
-			value = 0;
-		}
-		return (value)
+		value = 1;
 	}
+	else
+	{
+		value = 0;
+	}
+	return (value);
 }
