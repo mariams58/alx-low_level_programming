@@ -11,9 +11,9 @@ void more_numbers(void)
 
 	while (j < 10)
 	{
-		i = 0;
+		i = '0';
 
-		while (i < 15)
+		while (i < '15')
 		{
 			_putchar('0' + i);
 			i++;
