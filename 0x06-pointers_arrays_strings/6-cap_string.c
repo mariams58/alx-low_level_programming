@@ -14,13 +14,13 @@ char *cap_string(char *str)
 	{
 		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] -= 32;
+			*str[i] -= 32;
 		}
 		for (j = 0; j < 11; j++)
 		{
 			if (str[i] == sym[j])
 			{
-				str[i + 1] = str[i + 1] - 32;
+				*str[i + 1] = str[i + 1] - 32;
 			}
 		}
 	}
