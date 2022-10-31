@@ -6,19 +6,20 @@
   */
 void print_triangle(int size)
 {
+	int i, j, z;
 	int x = 0;
 	int y = size;
 
-	for (int i = 0; i < h; i++)
+	for (i = 0; i < size; i++)
 	{
 		x = x + 1;
 		y = y - 1;
 
-		for (int z = y; z > 0; z--)
+		for (z = y; z > 0; z--)
 		{
 			_putchar(' ');
 		}
-		for (int j = 0; j < x; j++)
+		for (j = 0; j < x; j++)
 		{
 			_putchar('#');
 		}
