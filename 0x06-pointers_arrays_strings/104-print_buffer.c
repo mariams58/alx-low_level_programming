@@ -20,7 +20,7 @@ void print_lines(char *c, int s, int l)
 		else
 			printf(" ");
 	}
-	for (k = 0; k <= ; k++)
+	for (k = 0; k <= s; k++)
 	{
 		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
 		{
