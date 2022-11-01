@@ -3,7 +3,7 @@
   * _memset - fills the memory with a costant byte
   * @s: pointer to var
   * @b: constant byte
-  * n: first byte
+  * @n: first byte
   *
   * Return: value
   */
