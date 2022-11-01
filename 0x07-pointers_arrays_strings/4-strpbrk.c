@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
   * _strpbrk - searches for a string of ant set of bytes
   * @s: first occurence
@@ -17,7 +18,7 @@ char *_strpbrk(char *s, char *accept)
 			if (*s == accept[i])
 				return (s);
 		}
-		s++
+		s++;
 	}
 	return (NULL);
 }
