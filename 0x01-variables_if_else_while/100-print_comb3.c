@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
   *main - pringout number comb
   *
@@ -27,9 +26,3 @@ int main(void)
 	putchar(10);
 	return (0);
 }
-
-
-
-
-
-			
