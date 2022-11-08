@@ -17,19 +17,16 @@ char *_strdup(char *str)
 		;
 	}
 
+	i = i + 1
 	while (1)
 	{
 		if (str == NULL)
 			return (NULL);
 
-		dest = malloc(sizeof(*dest) * (i + 1));
+		dest = malloc(sizeof(*dest) * i);
 		if (dest != NULL)
 		{
-			while (i >= 0)
-			{
-				*(dest + i) = *(str + i);
-				i++;
-			}
+			*dest = *str;
 			return (dest);
 		}
 		else
