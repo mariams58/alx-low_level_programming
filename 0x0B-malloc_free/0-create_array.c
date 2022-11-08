@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 /**
   * create_array - created an array of a give size that start with a letter
   * @size: given size of the array
@@ -8,7 +10,7 @@
   */
 char *create_array(unsigned int size, char c)
 {
-	*str;
+	char *str;
 
 	str = malloc(sizeof(*str) * size);
 	str[0] = c;
