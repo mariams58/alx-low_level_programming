@@ -19,15 +19,18 @@ char *_strdup(char *str)
 		if (str == NULL)
 			return (NULL);
 
-k		dest = malloc(sizeof(*dest) * i);
-		if (i != 0)
+		dest = malloc(sizeof(*dest) * i);
+		if (dest != NULL)
 		{
 			while (i >= 0)
 			{
-				dest[i] = str[i];
+				if (*(str + i) != '\0')
+				{
+					*(dest + i) = *(str + i);
+				}
 				i++;
 			}
-			dest[i] = '\0';
+			*(dest + i) = '\0';
 			return (dest);
 		}
 		else
