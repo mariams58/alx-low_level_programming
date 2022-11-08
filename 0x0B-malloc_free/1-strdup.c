@@ -22,10 +22,10 @@ char *_strdup(char *str)
 		if (str == NULL)
 			return (NULL);
 
-		dest = malloc(sizeof(*dest) * i);
+		dest = malloc(sizeof(*dest) * (i + 1));
 		if (dest != NULL)
 		{
-			while (0 < i)
+			while (i >= 0)
 			{
 				*(dest + i) = *(str + i);
 				i++;
