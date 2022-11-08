@@ -22,7 +22,7 @@ char *_strdup(char *str)
 		dest = malloc(sizeof(*dest) * i);
 		if (dest != NULL)
 		{
-			while (i)
+			while (i >= 0)
 			{
 				dest[i] = str[i];
 				i++;
@@ -34,4 +34,20 @@ char *_strdup(char *str)
 			return (NULL);
 	}
 	return (0);
+}
+/**
+  * _strlen - returns the length of a string
+  *@str: pointer address of a string
+  *
+  * Return: length of s
+  */
+int _strlen(char *str)
+{
+	int len;
+
+	for (len = 0; str[len] != '\0'; len++)
+	{
+		;
+	}
+	return (len);
 }
