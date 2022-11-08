@@ -1,15 +1,15 @@
-#include "main.h"
+#include <unistdio.h>
 /**
   * _strlen - returns the length of a string
-  *@s: pointer address of a string
+  *@str: pointer address of a string
   *
   * Return: length of s
   */
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int len;
 
-	for (len = 0; s[len] != '\0'; len++)
+	for (len = 0; str[len] != '\0'; len++)
 	{
 		;
 	}

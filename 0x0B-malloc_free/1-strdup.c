@@ -2,16 +2,17 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
-  * create_array - created an array of a give size that start with a letter
-  * @size: given size of the array
-  * @c: staring char of the array
+  * _strdup - copies an array of string into another pointer
+  * @str: array
   *
   * Return: pointer to tha array
   */
 char *_strdup(char *str)
 {
 	char *dest;
-	unsigned int i = _strlen(*str);
+	int i;
+
+	i = _strlen(str);
 
 	while (1)
 	{

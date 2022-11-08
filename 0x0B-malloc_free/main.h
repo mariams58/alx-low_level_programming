@@ -3,7 +3,7 @@
 
 int _putchar(char c);
 
-int _strlen(char *s);
+int _strlen(char *);
 
 char *create_array(unsigned int size, char c);
 
