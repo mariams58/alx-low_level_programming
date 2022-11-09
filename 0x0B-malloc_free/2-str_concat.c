@@ -1,13 +1,15 @@
 #include "main.h"
+#include <stdlib.h>
 /**
   * str_concat - joins 2 strings together
+  * @s2: string 1
   * @s2: string 2
   *
   * Return: destination of joineed strings
   */
-char *str_concat(char *s1; char *s2)
+char *str_concat(char *s1, char *s2)
 {
-	*char dest;
+	char *dest;
 	unsigned int i, j, x, y;
 
 	while (1)
@@ -34,7 +36,7 @@ char *str_concat(char *s1; char *s2)
 		{
 			dest[j] = s2[j];
 		}
-		return (dest)
+		return (dest);
 	}
-	return(NULL)
-
+	return(NULL);
+}
