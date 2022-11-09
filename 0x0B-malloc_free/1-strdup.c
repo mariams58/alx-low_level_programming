@@ -10,25 +10,24 @@
 char *_strdup(char *str)
 {
 	char *dest;
-	int i, j;
+	unsigned int i, j;
 
 	for (i = 0; str[i] == '\0'; i++)
 	{
 		;
 	}
 
-	i = i + 1;
 	while (1)
 	{
 		if (str == NULL)
 			return (NULL);
 
-		dest = malloc(sizeof(*dest) * i);
+		dest = malloc(sizeof(*dest) * (i + 1));
 		if (dest != NULL)
 		{
 			for (j = 0; j <= i; j++)
 			{
-				*(dest + j) = *(str + j);
+				dest[j] = str[j];
 			}
 			return (dest);
 		}
