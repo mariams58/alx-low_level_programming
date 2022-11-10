@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 			;
 		}
 
-		dest = malloc(sizeof(*dest) * (i + j + 2));
+		dest = malloc(sizeof(*dest) * (i + j + 1));
 		if (s1 == NULL && s2 == NULL)
 			return (NULL);
 		if (dest == NULL)
@@ -32,10 +32,11 @@ char *str_concat(char *s1, char *s2)
 		{
 			dest[x] = s1[x];
 		}
-		for (y = 0; y <= j; y++)
+		for (y = 0; y <= j; x++, y++)
 		{
 			dest[j] = s2[j];
 		}
+		dest[i + j] = '\0';
 		return (dest);
 	}
 	return(NULL);
