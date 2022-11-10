@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
   * str_concat - joins 2 strings together
-  * @s2: string 1
+  * @s1: string 1
   * @s2: string 2
   *
   * Return: destination of joineed strings
@@ -14,11 +14,11 @@ char *str_concat(char *s1, char *s2)
 
 	while (1)
 	{
-		for (i = 0; i != '\0'; i++)
+		for (i = 0; s1[i] != '\0'; i++)
 		{
 			;
 		}
-		for (j = 0; j != '\0'; j++)
+		for (j = 0; s2[j] != '\0'; j++)
 		{
 			;
 		}
