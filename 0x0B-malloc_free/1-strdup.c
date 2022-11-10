@@ -23,9 +23,9 @@ char *_strdup(char *str)
 			return (NULL);
 		if (dest == NULL)
 			return (NULL);
-		for (j = 0; j <= i; j++)
+		for (j = 0; j <= i + 1; j++)
 		{
-			dest[j] = str[i];
+			dest[j] = str[j];
 		}
 		return (dest);
 	}
