@@ -29,13 +29,10 @@ char *str_concat(char *s1, char *s2)
 			return (NULL);
 		if (dest == NULL)
 			return (NULL);
-		while (str[i + j + 1])
-		{
-			for (x = 0; x <= i; x++)
-				str[x] = s1[x];
-			for (y = 0; y <= j; y++)
-				str[x + y + 1] = s2[y];
-		}
+		for (x = 0; x <= i; x++)
+			str[x] = s1[x];
+		for (y = 0; y <= j; y++)
+			str[x + y + 1] = s2[y];
 		return (dest);
 	}
 	return (NULL);
