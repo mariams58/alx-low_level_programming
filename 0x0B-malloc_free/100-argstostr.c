@@ -10,13 +10,13 @@
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i = 1, j, k = 0, len = 0;
+	int i = 0, j, k = 0, len = 0;
 
 	while (1)
 	{
 		while (i < ac)
 		{
-			for (j = 0; *av[j] != '\0'; j++)
+			for (j = 0; j != '\0'; j++)
 				;
 			len += j;
 			i++;
@@ -30,6 +30,7 @@ char *argstostr(int ac, char **av)
 			if (*av[k] == 32)
 				str[k] = 10;
 		}
+		str[len + 1] = '\0';
 		return (str);
 	}
 	return (0);
