@@ -26,15 +26,11 @@ char *argstostr(int ac, char **av)
 		str = malloc(sizeof(char) * len + 1);
 		if (str == NULL)
 			return (NULL);
-		while (k <= ac)
+		for (x = 0; x <= len; x++)
 		{
-			for (x = 0; *av[x] != '\0'; x++)
-			{
-				str[x] = *av[x];
-				if (*av[x] == 32)
-					str[x] = 10;
-			}
-			k++;
+			str[x] = *av[x];
+			if (*av[x] == 32)
+				str[x] = 10;
 		}
 		str[len + 1] = '\0';
 		return (str);
