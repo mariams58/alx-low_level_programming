@@ -28,17 +28,15 @@ char *str_concat(char *s1, char *s2)
 			return (NULL);
 		else if (dest == NULL)
 			return (NULL);
-		else if (i < 1)
-			dest = s2;
-		else if (j < 1)
-			dest = s1;
 		else
+		{
 			for (x = 0; x <= i; x++)
 			{
 				dest[x] = s1[x];
-				for (y = 0; y <= j; y++)
-					dest[x + y + 1] = s2[y];
 			}
+			for (y = 0; y <= j; y++)
+				dest[x + y + 1] = s2[y];
+		}
 		dest[i + j + 1] = '\0';
 		return (dest);
 	}
