@@ -9,8 +9,8 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-	char str[] = "";
-	char *dest = &str;
+	char str[] = "\0";
+	char *dest = str;
 	unsigned int i, j, x, y;
 
 	while (1)
