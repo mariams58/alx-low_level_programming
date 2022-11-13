@@ -9,8 +9,7 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-	char str[] = "";
-	char *dest = str;
+	char *dest;
 	unsigned int i, j, x, y;
 
 	while (1)
@@ -30,10 +29,10 @@ char *str_concat(char *s1, char *s2)
 		if (dest == NULL)
 			return (NULL);
 		for (x = 0; x <= i; x++)
-			str[x] = s1[x];
+			dest[x] = s1[x];
 		for (y = 0; y <= j; y++)
-			str[x + 1] = s2[y];
-		str[i + j + 2] = '\0';
+			dest[x + 1] = s2[y];
+		dest[i + j + 2] = '\0';
 		return (dest);
 	}
 	return (NULL);
