@@ -10,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *str, *wrd;
-	int i, x, k, j, len = 0;
+	int i, k, j, y, len = 0;
 
 	while (1)
 	{
@@ -20,27 +20,30 @@ char *argstostr(int ac, char **av)
 		while (i < ac)
 		{
 			wrd = av[i];
-
-			for (k = 0; wrd[k] != '\0'; k++)
-				;
-			len += k;
+			k = 0;
+			while (wrd[k++])
+				len++;
+			len++;
 			i++;
 		}
 		str = malloc(sizeof(char) * (len + 1));
 		if (str == NULL)
 			return (NULL);
-		j = 0;
+		j = 0, y = 0;
 		while (j < ac && j < len)
 		{
 			wrd = av[j];
-			for (x = 0; wrd[x] != '\0'; x++)
+			k = 0;
+			while (wrd[k])
 			{
-				str[x] = wrd[x];
+				str[y] = wrd[k];
+				k++;
+				y++;
 			}
-			str[x++] = 10;
+			str[y++] = 10;
 			j++;
 		}
-		str[x + 1] = '\0';
+		str[y] = '\0';
 		return (str);
 	}
 	return (0);
