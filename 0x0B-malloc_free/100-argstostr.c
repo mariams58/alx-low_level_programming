@@ -23,21 +23,21 @@ char *argstostr(int ac, char **av)
 
 			for (k = 0; wrd[k] != '\0'; k++)
 				;
-			len =+ k;
+			len += k;
 			i++;
 		}
 		str = malloc(sizeof(char) * (len + 1));
 		if (str == NULL)
 			return (NULL);
 		j = 0;
-		while (j < ac)
+		while (j < ac && j < len)
 		{
 			wrd = av[j];
-			for(x = 0; wrd[x] != '\0'; x++)
+			for (x = 0; wrd[x] != '\0'; x++)
 			{
 				str[x] = wrd[x];
 			}
-			str[x + 1] = 10;
+			str[x++] = 10;
 			j++;
 		}
 		str[x + 1] = '\0';
