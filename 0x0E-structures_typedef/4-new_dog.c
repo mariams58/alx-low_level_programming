@@ -4,7 +4,7 @@
 /**
   *new_dog - stores a new dog
   * 
-  */i
+  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ndog;
