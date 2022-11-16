@@ -1,4 +1,4 @@
-include "main.h"
+#include <stdio.h>
 /**
   * main - writes out the name of the current file
   *
@@ -6,6 +6,6 @@ include "main.h"
   */
 int main(void)
 {
-	_putchar(__FILE__);
+	printf("%s\n", __FILE__);
 	return (0);
 }
