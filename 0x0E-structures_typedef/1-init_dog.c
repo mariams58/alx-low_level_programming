@@ -1,4 +1,4 @@
-#inlude "dog.h"
+#include "dog.h"
 /**
   * init_dog - function
   * @d: structure dog
