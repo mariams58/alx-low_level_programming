@@ -10,24 +10,25 @@
 void print_strings(const char *seperator, const unsigned int n, ...)
 {
 	unsigned int i;
-	char s;
+	char *s;
+
 	va_list ptr;
 
 	va_start(ptr, n);
 	for (i = 0; i < n - 1; i++)
 	{
-		s = va_arg(ptr, char);
-		if (s == '\0')
+		s = va_arg(ptr, char*);
+		if (*s == '\0')
 		{
-			s = "(nil)";
+			printf("(nil)");
 		}
-		printf("%c", s);
+		printf("%s", s);
 		if (*seperator != '\0')
 		{
-			printf("%c ", *seperator);
+			printf("%s", seperator);
 		}
 	}
-	s = va_arg(ptr, char);
-	printf("%c\n", s);
-	vva_end(ptr);
+	s = va_arg(ptr, char *);
+	printf("%s\n", s);
+	va_end(ptr);
 }

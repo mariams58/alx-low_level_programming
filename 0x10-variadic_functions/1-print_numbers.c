@@ -20,7 +20,7 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 		s = va_arg(ptr, int);
 		printf("%d", s);
 		if (*seperator != '\0')
-			printf("%c ", *seperator);
+			printf("%s", seperator);
 	}
 	s = va_arg(ptr, int);
 	printf("%d\n", s);
