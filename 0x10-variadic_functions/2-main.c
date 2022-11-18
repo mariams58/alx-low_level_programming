@@ -7,6 +7,6 @@
   */
 int main(void)
 {
-	print_strings(", ", 3, "Jay", NULL, "Django");
+	print_strings(", ", 5, "Jay", NULL, "Django", "", "nothing");
         return (0);
 }
