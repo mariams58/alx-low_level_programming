@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 				s = va_arg(ap, char *);
 				if (*s != '\0')
 					printf("%s", s);
-				else if (*s == '\0')
+				if (*s == '\0')
 					printf("(nil)");
 				break;
 		}
