@@ -7,6 +7,6 @@
   */
 int main(void)
 {
-	print_all("fcsi", 3.14245, 'H', NULL, 402);
+	print_all("mghyfqwpcresjhgi", 3.14245, 'H', NULL, 402);
 	return (0);
 }
