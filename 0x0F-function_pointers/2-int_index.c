@@ -9,7 +9,7 @@
   */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int x, i, num;
+	int x, i, num, value = -1;
 
 	while (cmp != NULL || array != NULL)
 	{
@@ -20,12 +20,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 				num = array[i];
 				x = cmp(num);
 				while (x != 0)
-					break;
-				return (-1);
+					value = i;
+				break;
 			}
 		}
-		else
-			return (-1);
 	}
-	return (i);
+	return (value);
 }
