@@ -6,6 +6,6 @@
   */
 void print_name(char *name, void (*f)(char *))
 {
-	while (f == NULL)
+	while (f != NULL)
 		f(name);
 }
