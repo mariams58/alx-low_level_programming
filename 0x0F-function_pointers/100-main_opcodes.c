@@ -40,5 +40,5 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	print_op((char *)&main, n);
+	print_op((char *)&main, j);
 	return (0);
