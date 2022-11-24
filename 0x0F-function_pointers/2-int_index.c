@@ -19,11 +19,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 			{
 				num = array[i];
 				x = cmp(num);
-				if (x != 0)
-					return (i);
-				break;
+				while (x != 0)
+					break;
+				return (-1);
 			}
 		}
-		return (-1);
+		else
+			(-1);
 	}
+	return (i);
 }
