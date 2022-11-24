@@ -19,9 +19,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 			{
 				num = array[i];
 				x = cmp(num);
-				if (x == 1)
-					value = i;
-				return (value);
+				if (x == 1)	
+					return (i);
 			}
 		}
 	}
