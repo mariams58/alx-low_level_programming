@@ -8,7 +8,8 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i = 0, num;
+	int num;
+	long unsigned int i;
 
 	while (i < size)
 	{
