@@ -20,7 +20,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 				num = array[i];
 				x = cmp(num);
 				if (x != 0)
-					return (i);
+					value = i;
 				break;
 			}
 			return (value);
