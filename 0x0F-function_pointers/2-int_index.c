@@ -11,7 +11,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int x, i, num, value = -1;
 
-	while (cmp != NULL || array != NULL)
+	if (cmp != NULL || array != NULL)
 	{
 		if (size > 0)
 		{
@@ -19,7 +19,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 			{
 				num = array[i];
 				x = cmp(num);
-				while (x != 0)
+				if (x != 0)
 					value = i;
 				break;
 			}
