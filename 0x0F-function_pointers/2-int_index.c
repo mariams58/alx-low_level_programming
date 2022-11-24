@@ -21,12 +21,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 				x = cmp(num);
 				if (x == 1)
 					value = i;
-				break;
 				return (value);
-			}
-			return (value);
 		}
-		return (value);
 	}
-	return (i);
+	return (value);
 }
