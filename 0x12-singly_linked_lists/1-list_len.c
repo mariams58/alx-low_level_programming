@@ -1,9 +1,18 @@
 #include "lists.h"
 /**
-  * add_node - returns the address of a new element or null if it failed
-  * @head: pointer to a pointer
-  * @str: pointer to str
+  * list_len - returns number of element or null if it failed
+  * @h: pointer to a pointer
   *
-  * Return: An address to new node
+  * Return: number of elements
   */
+size_t list_len(const list_t *h)
+{
+	size_t count = 0;
 
+	while (h != NULL)
+	{
+		count += 1;
+		h = h->next;
+	}
+	return (count);
+}
