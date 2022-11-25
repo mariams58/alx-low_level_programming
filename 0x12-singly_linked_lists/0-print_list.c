@@ -3,7 +3,8 @@
   * print_list - prints out the list of the pointer given
   * @h: pointer to the given list
   *
-  * Returns: value of type size_t
+  * Description: this is a little
+  * Return: value of type size_t
   */
 size_t print_list(const list_t *h)
 {
