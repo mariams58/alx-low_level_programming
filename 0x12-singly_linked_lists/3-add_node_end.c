@@ -10,7 +10,7 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	char *new_str = strdup(str);
 	list_t *node;
-	list_t *last_node = *head
+	list_t *last_node = *head;
 	unsigned int i;
 
 	for (i = 0; new_str[i] != '\0'; i++)
