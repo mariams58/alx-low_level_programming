@@ -21,8 +21,9 @@ size_t print_list(const list_t *h)
 		_putchar(32);
 		if (new->str != NULL)
 		{
-			for (i = 0; new->str[i] != '\0'; i++)
-				_putchar(new->str[i]);
+			*err = new->str;
+			for (i = 0; err[i] != '\0'; i++)
+				_putchar(err[i]);
 		}
 		else
 		{
