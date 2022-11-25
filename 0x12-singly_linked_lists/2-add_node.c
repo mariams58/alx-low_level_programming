@@ -25,4 +25,5 @@ list_t *add_node(list_t **head, const char *str)
 	return (node);
 	free(node);
 	free(node->str);
+	free(new_str);
 }
