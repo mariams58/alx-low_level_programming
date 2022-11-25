@@ -8,13 +8,16 @@
   */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	char *new_str = strdup(str);
+	char *new_str = NULL;
 	list_t *node;
 	list_t *last_node = *head;
 	unsigned int i;
 
-	for (i = 0; new_str[i] != '\0'; i++)
-		;
+	new_str = strdup(str);
+	if (new_str == NULL)
+		return (NULL);
+	for (i = 0; new_str[i] != '\0'; i++);
+
 	node = (list_t *)malloc(sizeof(list_t));
 	if (node == NULL)
 		return (NULL);
@@ -34,4 +37,3 @@ list_t *add_node_end(list_t **head, const char *str)
 	free(node->str);
 	free(new_str);
 }
-
