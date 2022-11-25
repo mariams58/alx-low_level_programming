@@ -11,19 +11,17 @@ size_t print_list(const list_t *h)
 	unsigned int i;
 	size_t num = 0;
 	char *err = "(nil)";
-	const list_t *new = h;
 
-	while (new != NULL)
+	while (h != NULL)
 	{
 		_putchar(91);
-		_putchar(new->len);
+		_putchar(h->len + '0');
 		_putchar(93);
 		_putchar(32);
-		if (new->str != NULL)
+		if (h->str != NULL)
 		{
-			*err = new->str;
-			for (i = 0; err[i] != '\0'; i++)
-				_putchar(err[i]);
+			for (i = 0; h->str[i] != '\0'; i++)
+				_putchar(h->str[i]);
 		}
 		else
 		{
@@ -32,8 +30,9 @@ size_t print_list(const list_t *h)
 				_putchar(*err);
 				err++;				}
 		}
+		_putchar(10);
 		num += 1;
-		new = new->next;
+		h = h->next;
 	}
 	return (num);
 }
