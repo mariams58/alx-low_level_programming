@@ -1,5 +1,18 @@
 #include "lists.h"
 /**
+  * double_digit - prints a double digit using putchar
+  * @x: given num
+  */
+void double_digit(unsigned int x)
+{
+	if (x / 10)
+	{
+		double_digit(x / 10);
+	}
+	_putchar((x % 10) + '0');
+}
+
+/**
   * print_list - prints out the list of the pointer given
   * @h: pointer to the given list
   *
@@ -15,7 +28,7 @@ size_t print_list(const list_t *h)
 	while (h != NULL)
 	{
 		_putchar(91);
-		_putchar(h->len + '0');
+		double_digit(h->len);
 		_putchar(93);
 		_putchar(32);
 		if (h->str != NULL)
