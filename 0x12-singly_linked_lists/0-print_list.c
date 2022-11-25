@@ -11,7 +11,7 @@ size_t print_list(const list_t *h)
 	size_t num = 0;
 	char *err = "(nil)";
 
-	while (h != NULL)
+	if (h != NULL)
 	{
 		_putchar(91);
 		_putchar(h->len);
@@ -28,7 +28,7 @@ size_t print_list(const list_t *h)
 					err++;
 				}
 		}
-		num++;
+		num += 1;
 	}
 	return (num);
 }
