@@ -8,19 +8,21 @@
   */
 size_t print_list(const list_t *h)
 {
-	unsigned int i;
+	unsigned int i j;
 	size_t num = 0;
 	char *err = "(nil)";
 	list_t strct;
+
 	h = &strct;
+	j = h->len;
 
 	while (h != NULL)
 	{
 		_putchar(91);
-		_putchar(h->len);
+		_putchar(j);
 		_putchar(93);
 		_putchar(32);
-		for (i = 0; i < h->len; i++)
+		for (i = 0; i < j; i++)
 		{
 			if (h->str != NULL)
 				_putchar(h->str[i]);
