@@ -8,30 +8,31 @@
   */
 size_t print_list(const list_t *h)
 {
-	unsigned int i, j;
+	unsigned int i;
 	size_t num = 0;
 	char *err = "(nil)";
-	j = h->len;
+	const list_t *new = h;
 
-	while (h != NULL)
+	while (new != NULL)
 	{
 		_putchar(91);
-		_putchar(j);
+		_putchar(new->len);
 		_putchar(93);
 		_putchar(32);
-		for (i = 0; i < j; i++)
+		if (new->str != NULL)
 		{
-			if (h->str != NULL)
-				_putchar(h->str[i]);
-			else
-				while (*err)
-				{
-					_putchar(*err);
-					err++;
-				}
+			for (i = 0; i < new->len; i++)
+				_putchar(new->str[i]);
+		}
+		else
+		{
+			while (*err)
+			{
+				_putchar(*err);
+				err++;				}
 		}
 		num += 1;
-		h = h->next;
+		new = new->next;
 	}
 	return (num);
 }
