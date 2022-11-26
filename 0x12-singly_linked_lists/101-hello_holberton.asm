@@ -1,21 +1,25 @@
 ; -----------------------------------------------------------------------------------------------------------------------
-; Writes Hello, Holberton to the console using only system calls. Runs on 64-bit system only
+; Writes Hello, Holberton to the console using only c-library printf. Runs on 64-bit system only
 ;
 ; To run the program, run this :
 ;
-; ------------------------------------------------------------------------------------------------------------------------
+; --------------------------------------------------------------------------------------------------------------------------
+	SECTION .data
+msg:    db "Hello, Holberton", 0
 
-	global	_start
+fmt:    db "%s", 10, 0
 
-	section .text
-start:	mov	rax, 1			; system call for write
-	mov	rdi, 1			; file handle 1 is stdout
-	mov	rsi, message		; Address of string to handle
-	mov	rdx, 17			;number of byted to output
-	syscall				; invoke operating system to write
-	mov	rax, 60			; system call for edit
-	xor	rdi, rdi		; exit code 0
-	syscall				; invoke operating sys o exiit
 
-	section	.data
-message	db;	"Hello, Holberton" 10	; note the newline at th end
+
+        SECTION .text
+	extern printf
+	global main	; the standard cc entry point
+main:			; the program label entry point
+        mov esi, msg    ; 64-bit ABI passing order starts w/ edi, esi, ...
+	mov edi, fmt    ;
+	mov eax, 0      ; printf is varargs, so EAX counts # of non-integer arguments being passed
+	call printf
+
+	mov ebx, 0      ; normal-exit code
+	mov eax, 1      ; process-termination service
+	int 0x80        ; linux kernel service
