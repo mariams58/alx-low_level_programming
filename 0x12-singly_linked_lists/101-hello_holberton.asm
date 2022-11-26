@@ -22,4 +22,3 @@ main:			; the program label entry point
 
 	mov ebx, 0      ; normal-exit code
 	mov eax, 1      ; process-termination service
-	int 0x80        ; linux kernel service
