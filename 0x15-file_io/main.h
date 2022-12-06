@@ -4,7 +4,7 @@
 /* all header included for the system call usage */
 #include <unistd.h>
 #include <stdlib.h>
-#include <fnctl.h>
+#include <fcntl.h>
 
 /* protypes to all task included here */
 int _putchar(char);
