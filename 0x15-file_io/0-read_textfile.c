@@ -1,8 +1,10 @@
 #include "main.h"
 /**
-  * read_textfile - raeds a given filea pointer to a text file
+  * read_textfile- raeds a given filea pointer to a text file
   * @filename: pointer to the name of the file provided
   * @letters: number of bytes to be written
+  *
+  * Return: number of bytr=es printed
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -13,12 +15,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while (filename != NULL)
 	{
 		fd = open(filename, O_RDONLY);
-		if (fd < 0)
-			return (0);
-		num = read(fd, buf, letters);
-			if (num < 0)
-				return (0);
-		return (num);
+		if (fd > 0)
+		{
+			num = read(fd, buf, letters);
+				if (num < 0)
+					return (0);
+				return (num);
+		}
+		return (0);
 		close(fd);
 	}
 	return (0);
