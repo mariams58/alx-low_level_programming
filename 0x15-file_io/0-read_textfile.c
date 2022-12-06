@@ -12,17 +12,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	void * const buf = &filename;
 
-	while (filename != NULL)
-	{
-		fd = open(filename, O_RDONLY);
-		if (fd > 0)
-		{
-			num = read(fd, buf, letters);
-				if (num < 0)
-					return (0);
-				return (num);
-		}
+	if (filename == NULL)
 		return (0);
+	fd = open(filename, O_RDONLY);
+	if (fd > 0)
+	{
+		num = read(STDIN_FILENO, buf, letters);
+		if (num < 0)
+			return (0);
+		return (num);
 		close(fd);
 	}
 	return (0);
