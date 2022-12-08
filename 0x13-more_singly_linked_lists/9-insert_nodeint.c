@@ -15,15 +15,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		temp = (*head)->next;
 		count += 1;
-		if (count - 2 == idx)
+		if ((count - 2 == idx) && temp != NULL)
 		{
 			next = temp;
 			new = malloc(sizeof(listint_t));
 			new->n = n;
-			temp = new;
 			new->next = next;
-			return (new);
+			temp = new;
+			return (temp);
 		}
+		else
+			return (NULL);
 		*head = temp;
 	}
 	return (NULL);
