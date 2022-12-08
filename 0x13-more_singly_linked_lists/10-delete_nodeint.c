@@ -12,16 +12,18 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int count = 0;
 	listint_t *temp;
 
-	temp = malloc(sizeof(listint_t);
+	temp = malloc(sizeof(listint_t));
 	while (*head != NULL)
 	{
 		temp = (*head)->next;
 		count += 1;
 		if ((temp != NULL) && count - index == 2)
 		{
-			*temp = temp->next;
+			temp = temp->next;
 			ret = 1;
+			return (ret);
 		}
+
 		*head = temp;
 		free(temp);
 	}
