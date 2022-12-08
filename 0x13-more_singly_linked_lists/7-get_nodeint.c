@@ -10,12 +10,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
 
-	while (head != NULL || head->next != NULL)
+	while (head != NULL)
 	{
 		i += 1;
-		head = head->next;
 		if (i - 1 == index)
 			return (head);
+		if (head->next != NULL)
+			head = head->next;
 	}
 	return (NULL);
 }
