@@ -8,7 +8,7 @@
   */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *temp, *new;
+	listint_t *temp, *next, *new;
 	unsigned int count = 0;
 
 	while (*head != NULL)
