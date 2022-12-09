@@ -8,23 +8,24 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t num, i;
+	ssize_t num;
 	int fd;
-	void * const buf = &filename;
+	const void * buf = &filename;
 
-	if (filename == NULL)
-		return (0);
-	fd = open(filename, O_RDWR);
-	if (fd > 0)
+	if (filename != NULL)
 	{
-		num = read(STDIN_FILENO, buf, letters);
-		if (num < 0)
-			return (0);
-		i = write(STDIN_FILENO, buf, letters);
-		if (i == -1 || i < letters)
-			return (0);
-		if (num == i)
-			return (num);
+		fd = open(filename, O_CREAT | O_RDWR, 0644);
+		if (fd > 0)
+		{
+			num = write(fd, buf, letters);
+			if (num != -1)
+			{
+				write(fd, buf, letters);
+				return (num);
+			}
+			else
+				return (0);
+		}
 		close(fd);
 	}
 	return (0);
