@@ -1,3 +1,4 @@
+#include <string.h>
 #include "main.h"
 /**
   * read_textfile- raeds a given filea pointer to a text file
@@ -8,25 +9,27 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t num;
 	int fd;
-	const void * buf = &filename;
+	ssize_t num, i = 0;
+	char *buf;
+	const void * buffer = &filename;
 
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
+		return (0);
 	if (filename != NULL)
 	{
-		fd = open(filename, O_CREAT | O_RDWR, 0644);
-		if (fd > 0)
+		fd = open(filename, O_RDWR, 0644);
+
+		num = read(fd, buf, letters);
+		i = write(fd, buffer, letters);
+		if (fd == -1 || i == -1 || num != i || num == -1)
 		{
-			num = write(fd, buf, letters);
-			if (num != -1)
-			{
-				write(fd, buf, letters);
-				return (num);
-			}
-			else
-				return (0);
+			free(buf);
+			return (0);
 		}
+		free(buf);
 		close(fd);
 	}
-	return (0);
+	return (i);
 }
