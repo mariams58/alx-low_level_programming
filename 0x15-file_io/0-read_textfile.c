@@ -8,7 +8,7 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t num;
+	ssize_t num, i;
 	int fd;
 	void * const buf = &filename;
 
@@ -20,7 +20,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		num = read(STDIN_FILENO, buf, letters);
 		if (num < 0)
 			return (0);
-		return (num);
+		i = write(STDIN_FILENO, buf, letters);
+		if (i == -1 || i < letters)
+			return (0);
+		if (num == i)
+			return (num);
 		close(fd);
 	}
 	return (0);
