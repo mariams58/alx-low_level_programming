@@ -30,6 +30,9 @@ int create_file(const char *filename, char *text_content)
 			else
 				return (1);
 		}
+		else
+			fd = open(filename, O_CREAT);
+
 		close(fd);
 	}
 	return (-1);
