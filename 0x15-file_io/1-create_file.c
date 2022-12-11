@@ -11,20 +11,26 @@ int create_file(const char *filename, char *text_content)
 	ssize_t num;
 	int fd;
 	size_t i;
+	const void *buffer = &text_content;
 
-	while (text_content != NULL)
+	while (filename != NULL)
 	{
-		for (i = 0; text_content[i] == '\0'; i++)
+		for (i = 0; text_content[i] != '\0'; i++)
 			;
-		fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+		if (access(filename, F_OK) == 0)
+			fd = open(filename, O_WRONLY | O_TRUNC);
+		else
+			fd = open(filename, O_CREAT | O_WRONLY, S_IWUSR | S_IRUSR);
 		if (fd == -1)
 			return (-1);
-		num = write(STDIN_FILENO, text_content, i);
-		if (num == -1)
-			return (-1);
-		else
-			return (1);
-
+		if (text_content != NULL)
+		{
+			num = write(fd, buffer, i);
+			if (num == -1)
+				return (-1);
+			else
+				return (1);
+		}
 		close(fd);
 	}
 	return (-1);
