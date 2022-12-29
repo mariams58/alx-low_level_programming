@@ -19,7 +19,7 @@ void print_sum(int s)
   */
 void print_times_table(int n)
 {
-	int i, j, s, next_sum, x, y;
+	int i, j, s, next, x, y;
 
 	if (n > 15 || n < 0)
 		_putchar(10);
