@@ -21,7 +21,7 @@ int main(void)
 			a = b;
 			b = fib;
 		}
-		printf("%d", fib);
+		printf("%ld", fib);
 		if (count < 97)
 			printf(", ");
 	}
