@@ -19,12 +19,12 @@ int main(void)
 		{
 			fib = a + b;
 			a = b;
-		 	b = fib;
+			b = fib;
 		}
 		if (fib < 4000000 && (fib % 2 == 0))
 			sum += fib;
-		count ++;
-	 }
-	 printf("%ld\n", sum);
-	 return(0);
+		count++;
+	}
+	printf("%ld\n", sum);
+	return (0);
 }
