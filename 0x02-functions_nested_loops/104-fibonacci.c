@@ -6,10 +6,9 @@
   */
 int main(void)
  {
-	 unsigned long int a = 1, b = 2, fib;
-	 int count;
+	 int a = 1, b = 2, count, fib;
 
-	 for (count = 0; count != 50; count++)
+	 for (count = 0; count != 98; count++)
 	 {
 		 if (count == 0)
 			 fib = a;
@@ -21,8 +20,8 @@ int main(void)
 			 a = b;
 			 b = fib;
 		 }
-		 printf("%ld", fib);
-		 if (count < 49)
+		 printf("%d", fib);
+		 if (count < 97)
 			 printf(", ");
 	 }
 	 printf("\n");

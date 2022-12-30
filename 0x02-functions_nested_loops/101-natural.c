@@ -1,10 +1,10 @@
-#include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
 /**
-  * print_sum_numbers - the prints the sum of natural numbers that are multiples of three and five
+  * main - the prints the sum of natural numbers that are multiples of three and five
   *
+  * Return: Always 0 success
   */
-void print_sum_number(void)
+int main(void)
 {
 	int i = 1, sum = 0;
 	while (i < 1024)
@@ -14,4 +14,5 @@ void print_sum_number(void)
 		i++;
 	}
 	printf("The sum of all the multiples of 3 and 5 that are natural number is %d\n", sum);
+	return (0);
 }
