@@ -26,10 +26,10 @@ void print_times_table(int n)
 	else
 	{
 		j = 0;
-		while (j < n)
+		while (j < (n + 1))
 		{
 			i = 0;
-			while (i < n)
+			while (i < (n + 1))
 			{
 				s = i * j;
 				next = ((i + 1) * j) / 10;
@@ -50,9 +50,10 @@ void print_times_table(int n)
 						y++;
 					}
 				}
-				i++
+				i++;
 			}
-			j++
+			_putchar(10);
+			j++;
 		}
 		_putchar(10);
 	}
