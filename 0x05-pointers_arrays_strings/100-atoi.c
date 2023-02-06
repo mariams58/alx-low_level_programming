@@ -19,21 +19,19 @@ int _atoi(char *s)
 	j = 0;
 	while (s[j] != '\0')
 	{
-		if (num > INT_MAX / 10 || (num == INT_MAX / 10 && s[j] - '0' > 7)) 
+		if (num > INT_MAX / 10 || (num == INT_MAX / 10 && s[j] - '0' > 7))
 		{
 			if (sign % 2 != 0)
-				return INT_MAX;
+				return (INT_MAX);
 			else
-				return INT_MIN;
+				return (INT_MIN);
 		}
 		if (s[j] >= '0' && s[j] <= '9')
 			num = num * 10 + s[j] - '0';
 		if (s[j + 1] < 48 && s[j + 1] > 57)
 			break;
-		else
-			j++;
+		j++;
 	}
-	
 	if (sign % 2 != 0)
 		num = num * (-1);
 	return (num);
