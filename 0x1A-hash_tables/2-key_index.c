@@ -12,10 +12,10 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	unsigned long int ki;
 	int x;
 
-	ki = size;
+	ki = 5381;
 	while ((x = *key++))
 	{
 		ki = ((ki << 5) + ki) + x;
 	}
-	return (ki);
+	return (ki % size);
 }
