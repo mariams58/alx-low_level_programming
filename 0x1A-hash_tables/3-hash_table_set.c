@@ -4,7 +4,7 @@
 /**
   * mk_hnode - makes a new hash node
   * @key: given key
-  * @value given value
+  * @value: given value
   *
   * Return: returns the new node
   */
@@ -46,14 +46,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	char *new_value;
 
-	if (ht == NULL || ht->array == NULL || ht->size == 0 || key == NULL || strlen(key) == 0 || value == NULL)
+	if (ht == NULL || ht->size == 0 || key == NULL || value == NULL)
 	return (0);
-	index = key_index((const unsigned char *)key, ht->size);
+	index = key_index((const unsigned char *) key, ht->size);
 	new = ht->array[index];
 
 	while (new != NULL)
 	{
-		if (strcmp(new->key, key ) == 0)
+		if (strcmp(new->key, key) == 0)
 		{
 			new_value = strdup(value);
 			if (new_value == NULL)
