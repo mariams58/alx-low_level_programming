@@ -21,7 +21,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		if (strcmp(hnode->key, key) == 0)
 			return (hnode->value);
-		tmp = tmp->next;
+		hnode = hnode->next;
 	}
 	return (NULL);
 }
