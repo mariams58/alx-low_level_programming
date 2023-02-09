@@ -17,11 +17,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	index = key_index((const unsigned char *)key, ht->size);
 	hnode = ht->array[index];
-	if (hnode != NULL)
+	while (hnode != NULL)
 	{
 		if (strcmp(hnode->key, key) == 0)
 			return (hnode->value);
 		hnode = hnode->next;
+
 	}
 	return (NULL);
 }
