@@ -5,23 +5,19 @@
 def island_perimeter(grid):
     """ Calculates the perimeter of an island """
     rows = len(grid)
-    col = len(grid)
+    col = len(grid[0])
     if grid:
         leng = 0
         widt = 0
         for i in range(rows):
             for j in range(col):
                 if grid[i][j] == 1:
-                    if grid[i - 1][j] == 0:
-                        leng += 1
-                    if grid[i + 1][j] == 0:
+                    leng += 1
+                    if (grid[i - 1][j] == 1 and i > 0):
                         widt += 1
-        if leng == 0:
-            result = 2 * leng
-        elif widt == 0:
-            result = 2 * widt
-        else:
-            result = 2 * (leng + widt)
+                    if (grid[i][j - 1] == 1 and j > 0):
+                        widt += 1
+        result = leng * 4 -widt * 2
     return result
 
 
