@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long long int a = 1, b = 2, fib;
+	unsigned long a = 1, b = 2, fib;
 	int count;
 
 	for (count = 0; count < 98; count++)
@@ -21,7 +21,7 @@ int main(void)
 			a = b;
 			b = fib;
 		}
-		printf("%lld", fib);
+		printf("%lu", fib);
 		if (count < 97)
 			printf(", ");
 	}
