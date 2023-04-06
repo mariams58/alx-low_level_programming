@@ -16,14 +16,14 @@ void rev_string(char *s)
 	{
 		;
 	}
-	j = i + 1;
+	j = i;
 
 	while (x < j)
 	{
 		ts = s[j];
 		s[j] = s[x];
 		s[x] = ts;
-		i++;
+		x++;
 		j--;
 	}
 }
