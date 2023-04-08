@@ -12,6 +12,8 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		if (str[0] > 96 && str[0] < 123)
+			str[i] -= 32;
 		for (j = 0; j < 11; j++)
 		{
 			if ((str[i] == sym[j]) && (str[i + 1] > 96 && str[i + 1] < 123))
