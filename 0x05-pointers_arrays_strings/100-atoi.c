@@ -27,6 +27,13 @@ int _atoi(char *s)
 		}
 		j++;
 	}
+	if (num > INT_MAX / 10 || (num == INT_MAX / 10 && s[j] - '0' > 7))
+	{
+		if (sign % 2 != 0)
+			return (INT_MAX);
+		else
+			return (INT_MIN);
+	}
 	if (sign % 2 != 0)
 		num = num * (-1);
 	return (num);
