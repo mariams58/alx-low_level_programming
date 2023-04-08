@@ -8,17 +8,13 @@
 char *cap_string(char *str)
 {
 	int i, j;
-	char *sym = ",.! ?(){};";
+	char *sym = ",.! ?	(){}\n;";
 
-	for (i = 0; str[i] != 0; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
-		{
-			*(str + i) -= 32;
-		}
 		for (j = 0; j < 11; j++)
 		{
-			if (str[i] == sym[j])
+			if ((str[i] == sym[j]) && (str[i + 1] > 96 && str[i + 1] < 123))
 			{
 				*(str + i + 1) -= 32;
 			}
