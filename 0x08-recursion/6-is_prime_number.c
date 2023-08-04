@@ -27,6 +27,6 @@ int ck_prime(int x, int y)
 int is_prime_number(int n)
 {
 	if (n == 0)
-		return (0)
+		return (0);
 	return (ck_prime(1, n));
 }

@@ -12,7 +12,7 @@ int sqrt_chk(int x, int y)
 		return (x);
 	if (x * x > y)
 		return (-1);
-	return (sqrt_chk(x + 1, y);
+	return (sqrt_chk(x + 1, y));
 }
 
 /**
@@ -23,7 +23,7 @@ int sqrt_chk(int x, int y)
   */
 int _sqrt_recursion(int n)
 {
-	if (n = 0)
+	if (n == 0)
 		return (-1);
 	return (sqrt_chk(1, n));
 }
