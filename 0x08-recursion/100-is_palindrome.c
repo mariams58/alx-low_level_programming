@@ -8,7 +8,7 @@
 int s_len(char *s)
 {
 	if (s[0] != '\0')
-		return (1 + s_en(s + 1));
+		return (1 + s_len(s + 1));
 	return (0);
 }
 
@@ -37,8 +37,6 @@ int match_str(char *s, int l, int r)
   */
 int is_palindrome(char *s)
 {
-	int i = 0;
-
 	if (s[0] == '\0')
 		return (1);
 	return (match_str(s, 0, s_len(s) - 1));

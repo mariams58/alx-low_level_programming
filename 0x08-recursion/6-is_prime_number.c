@@ -14,13 +14,11 @@ int ck_prime(int x, int y)
 	else
 		if (y % x  == 0 && x <= y)
 		{
-			count += 1;
-			return (ck_prime(x + 1, y));
+			count = 1 + ck_prime(x + 1, y);
 		}
-	if (count > 2)
-		return (1);
-	else
+	if (count > 1)
 		return (0);
+	return (1);
 }
 
 /**
