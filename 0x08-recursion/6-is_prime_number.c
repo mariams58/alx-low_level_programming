@@ -7,11 +7,16 @@
   */
 int ck_prime(int x, int y)
 {
-	int count;
+	int count = 0;
 
-	if (x <= y)
-		if (y % x == 0)
-			count += ck_prime(x + 1, y);
+	if (y == 1 || y == 2)
+		return (1);
+	else
+		if (y % x  == 0 && x <= y)
+		{
+			count += 1;
+			return (ck_prime(x + 1, y));
+		}
 	if (count > 2)
 		return (1);
 	else
@@ -28,5 +33,5 @@ int is_prime_number(int n)
 {
 	if (n == 0)
 		return (0);
-	return (ck_prime(1, n));
+	return (ck_prime(2, n));
 }
