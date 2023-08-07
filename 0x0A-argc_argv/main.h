@@ -3,4 +3,6 @@
 int _putchar(char c);
 
 int my_prog(char *s);
+
+int my_prog1(int s);
 #endif

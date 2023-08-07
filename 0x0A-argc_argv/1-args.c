@@ -1,18 +1,17 @@
 #include "main.h"
 #include <stdio.h>
 /**
-  * my_prog - prints out arg
+  * my_prog1 - prints out arg
   * @s: pointer to str given
   *
   * Return: Always 0
   */
-int my_prog(char *s)
+int my_prog1(int s)
 {
-	int i = 0;
-	if (*s)
-		putchar('.');
-	while(s[++i])
-		putchar(s[i]);
+	int i = s - 1;
+
+	if (s > 0)
+		putchar(i + '0');
 	putchar('\n');
 	return (0);
 }
@@ -25,7 +24,7 @@ int my_prog(char *s)
   */
 int main(int argc, char *argv[])
 {
-	(void) argc; /* unsused variable */
-	my_prog(argv[0]);
+	(void) *argv; /* unsused variable */
+	my_prog1(argc);
 	return (0);
 }
