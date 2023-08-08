@@ -12,8 +12,11 @@ int my_prog(char *s)
 
 	if (*s)
 		putchar('.');
-	while (s[++i])
+	while (s[i] != '\0')
+	{
 		putchar(s[i]);
+		i++;
+	}
 	putchar('\n');
 	return (0);
 }
