@@ -10,8 +10,6 @@ int my_prog(char *s)
 {
 	int i = 0;
 
-	if (*s)
-		putchar('.');
 	while (s[i] != '\0')
 	{
 		putchar(s[i]);

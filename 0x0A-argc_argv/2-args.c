@@ -10,8 +10,11 @@ int my_prog2(char *s)
 {
 	int i = 0;
 
-	while (s[++i])
+	while (s[i] != '\0')
+	{
 		putchar(s[i]);
+		i++;
+	}
 	putchar('\n');
 	return (0);
 }
@@ -28,9 +31,9 @@ int main(int argc, char *argv[])
 	int i = 0;
 
 	while (i < argc)
-		if (i == 0)
-			putchar('.');
+	{
 		my_prog2(argv[i]);
 		i++;
+	}
 	return (0);
 }
