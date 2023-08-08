@@ -29,6 +29,7 @@ int my_prog(char *s)
 int main(int argc, char *argv[])
 {
 	(void) argc; /* unsused variable */
+
 	my_prog(argv[0]);
 	return (0);
 }

@@ -11,7 +11,7 @@ int my_prog_mul(char *s)
 {
 	int i;
 
-	i = atoi(s)
+	i = atoi(s);
 	return (i);
 }
 
@@ -24,7 +24,7 @@ int my_prog_mul(char *s)
   */
 int main(int argc, char *argv[])
 {
-	int 1 = 0, total = 1;
+	int i = 1, total = 1;
 
 	if (argc != 3)
 	{
@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 		while (i < argc)
 		{
 			total *= my_prog_mul(argv[i]);
+			i++;
 		}
 		printf("%d\n", total);
 	}
