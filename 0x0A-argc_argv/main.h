@@ -11,4 +11,6 @@ int my_prog2(char *s);
 int my_prog_mul(char *s);
 
 int my_prog_add(char *s);
+
+int my_change(int s);
 #endif
