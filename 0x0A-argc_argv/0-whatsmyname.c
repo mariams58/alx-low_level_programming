@@ -18,6 +18,7 @@ int my_prog(char *s)
 	putchar('\n');
 	return (0);
 }
+
 /**
   * main - print out name of program
   * @argc: argument count

@@ -14,6 +14,7 @@ int my_prog_mul(char *s)
 	i = atoi(s)
 	return (i);
 }
+
 /**
   * main - print out name of program
   * @argc: argument count
