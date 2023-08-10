@@ -9,8 +9,12 @@ int ck_prime(int x, int y)
 {
 	int count = 0;
 
-	if (y == 1 || y == 2)
+	if (y < 0)
+		y = y * -1;
+	if (y == 2)
+	{
 		return (1);
+	}
 	else
 		if (y % x  == 0 && x <= y)
 		{
