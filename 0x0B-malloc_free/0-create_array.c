@@ -8,17 +8,22 @@
   */
 char *create_array(unsigned int size, char c)
 {
-	char *s[];
+	char *s;
+	int i = 0;
 
 	if (size == 0)
 		return (NULL);
 	while (1)
 	{
-		s = (char *)malloc((sizeof(char) * size) + 1);
+		s = malloc((sizeof(*char) * size) + 1);
 		if (s != NULL)
 		{
-			s[0] = c;
-			s[1] = "\0";
+			while (i < size)
+			{
+				s[i] = c;
+				i++;
+			}
+			s[i] = '\0';
 			return (s);
 		}
 		return (NULL);
