@@ -1,3 +1,4 @@
+#include "main.h"
 /**
   * _strdup - copies a string into a new pointer
   * @str: pointer to the string given
@@ -13,7 +14,7 @@ char *_strdup(char *str)
 		;
 	while (1)
 	{
-		s = malloc(sizeof(*char) * (i + 1));
+		s = malloc(sizeof(char) * (i + 1));
 		if (s != NULL)
 		{
 			while (j < i)
