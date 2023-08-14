@@ -4,14 +4,14 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
- * struct my_struct - the type of struct dog
+ * struct dog - the type of struct dog
  * @name: First member
  * @age: Second member
  * @owner: Third member
  *
  * Description: This is the struct definition for dog
  */
-struct my_struct
+struct dog
 {
 	char *name;
 	float age;
