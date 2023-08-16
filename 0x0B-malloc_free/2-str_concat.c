@@ -21,7 +21,7 @@ unsigned int find_len(char *s1, char *s2)
 		for (y = 0; s2[y] != '\0'; y++)
 			;
 	}
-	size = x + y;
+	size = x + y + 1;
 	return (size);
 }
 
@@ -41,21 +41,22 @@ char *str_concat(char *s1, char *s2)
 	while (1)
 	{
 		s = malloc(sizeof(char *) * size);
-		if (s == NULL)
-			return (NULL);
-		while ( s1 != NULL && s1[i] != '\0')
+		if (s != NULL)
 		{
-			s[i] = s1[i];
-			i++;
+			while (s1 != NULL && s1[i] != '\0')
+			{
+				s[i] = s1[i];
+				i++;
+			}
+			if (s2 != NULL)
+			{
+				for (j = 0; s2[j] != '\0'; j++)
+					s[i++] = s2[j];
+			}
+			s[size] = '\0';
+			return (s);
 		}
-		if (s2 != NULL)
-		{
-			for (j = 0; s2[j] != '\0'; j++)
-				s[i++] = s2[j];
-		}
-		s[size] = '\0';
-		return (s);
-		free(s);
+		return (NULL);
 	}
 	return (0);
 }
