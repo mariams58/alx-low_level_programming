@@ -9,7 +9,7 @@
   */
 unsigned int find_len(char *s1, char *s2)
 {
-	unsigned int size, x, y;
+	unsigned int x, y, size = 0;
 
 	if (s1 != NULL)
 	{
@@ -21,7 +21,7 @@ unsigned int find_len(char *s1, char *s2)
 		for (y = 0; s2[y] != '\0'; y++)
 			;
 	}
-	size = x + y + 1;
+	size = x + y;
 	return (size);
 }
 
@@ -35,31 +35,24 @@ unsigned int find_len(char *s1, char *s2)
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	unsigned int size, j, i = 0;
+	unsigned int size = 0, j, i = 0;
 
-	if (s2 == NULL && s1 == NULL)
-		return (NULL);
 	size = find_len(s1, s2);
 	while (1)
 	{
 		s = malloc(sizeof(char *) * size);
 		if (s == NULL)
 			return (NULL);
-		if (s1 != NULL)
+		while ( s1 != NULL && s1[i] != '\0')
 		{
-			while (s1[i] != '\0')
-			{
-				s[i] = s1[i];
-				i++;
-			}
-			if (s2 == NULL)
-			{
-				s[i++] = '\0';
-				return (s);
-			}
+			s[i] = s1[i];
+			i++;
 		}
-		for (j = 0; s2[j] != '\0'; j++)
-			s[i++] = s2[j];
+		if (s2 != NULL)
+		{
+			for (j = 0; s2[j] != '\0'; j++)
+				s[i++] = s2[j];
+		}
 		s[size] = '\0';
 		return (s);
 		free(s);
