@@ -14,7 +14,7 @@ int print_numbers(const char *seperator, const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 	va_start(pt, n);
-	for (i = n; i >= 0; i = va_arg(pt, int))
+	for (i = 0; i <= n; i = va_arg(pt, int))
 	{
 		_puchar(i +'0');
 		if (seperator != NULL)
