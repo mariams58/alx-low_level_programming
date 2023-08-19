@@ -11,18 +11,18 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 
 	va_start(pt, format);
-	while (format && format[i] != "\0")
+	while (format && format[i] != '\0')
 	{
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(pt, char));
+				printf("%c", va_arg(pt, int));
 				break;
 			case 'i':
 				printf("%d", va_arg(pt, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(pt, float));
+				printf("%f", va_arg(pt, double));
 				break;
 			case 's':
 				if (va_arg(pt, char*) == NULL)
