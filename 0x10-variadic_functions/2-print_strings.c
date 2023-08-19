@@ -6,20 +6,26 @@
   *
   * Return: Sum value or 0
   */
-void print_numbers(const char *seperator, const unsigned int n, ...)
+void print_strings(const char *seperator, const unsigned int n, ...)
 {
 	va_list pt;
 	unsigned int i, j;
 	char *s;
 
 	if (n == 0)
-		return (0);
+	{
+		;
+	}
 	va_start(pt, n);
 	for (i = 0; i < n; i++)
 	{
-		printf("%s", va_arg(pt, char*));
+		s =  va_arg(pt, char *);
+		if (s == NULL)
+			printf("%s", s);
+		else
+			printf("(nil)");
 		if (seperator != NULL)
-			_putchar(seperator);
+			printf("%s", seperator);
 	}
 	va_end(pt);
 	printf("\n");
