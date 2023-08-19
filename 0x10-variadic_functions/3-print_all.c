@@ -9,6 +9,8 @@ void print_all(const char * const format, ...)
 {
 	va_list pt;
 	unsigned int i = 0;
+	char y;
+	int x;
 
 	va_start(pt, format);
 	while (format && format[i] != '\0')
@@ -16,21 +18,27 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(pt, int));
+				y = va_arg(pt, char);
+				printf("%c", y);
 				break;
 			case 'i':
-				printf("%d", va_arg(pt, int));
+				x = va_arg(pt, int);
+				printf("%d", y);
 				break;
 			case 'f':
 				printf("%f", va_arg(pt, double));
 				break;
 			case 's':
-				if (va_arg(pt, char*) == NULL)
-					printf("(nil)");
-				printf("%s", va_arg(pt, char *));
+				while (va_arg(pt, char*) != NULL)
+				{
+					printf("%s", va_arg(pt, char*));
+					break;
+				}
+				printf("(nil)");
 				break;
 		}
-		if (format[i++] != '\0')
+		if (format[i++] != '\0' && (format[i] == 'c' || format[i] == 's'
+					|| format[i] == 'i' || format[i] == 'f'))
 			printf(", ");
 		i++;
 	}
