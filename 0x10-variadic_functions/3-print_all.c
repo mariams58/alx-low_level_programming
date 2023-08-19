@@ -8,6 +8,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list pt;
+	char x;
 	unsigned int i = 0;
 
 	va_start(pt, format);
@@ -30,7 +31,6 @@ void print_all(const char * const format, ...)
 					printf("%s", va_arg(pt, char*));
 					break;
 				}
-				printf("(nil)");
 				break;
 		}
 		if (format[i++] != '\0' && (format[i] == 'c' || format[i] == 's'
@@ -39,4 +39,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	va_end(pt);
+	printf("\n");
 }
