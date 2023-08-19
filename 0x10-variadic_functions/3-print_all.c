@@ -9,8 +9,6 @@ void print_all(const char * const format, ...)
 {
 	va_list pt;
 	unsigned int i = 0;
-	char y;
-	int x;
 
 	va_start(pt, format);
 	while (format && format[i] != '\0')
@@ -18,12 +16,10 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				y = va_arg(pt, char);
-				printf("%c", y);
+				_putchar(va_arg(pt, int));
 				break;
 			case 'i':
-				x = va_arg(pt, int);
-				printf("%d", y);
+				printf("%d", va_arg(pt, int));
 				break;
 			case 'f':
 				printf("%f", va_arg(pt, double));
