@@ -10,10 +10,10 @@ void print_all(const char * const format, ...)
 	va_list pt;
 	unsigned int i = 0;
 
-	va_start(pt, n);
+	va_start(pt, format);
 	while (format && format[i] != "\0")
 	{
-		switch (format[i]);
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(pt, char));
