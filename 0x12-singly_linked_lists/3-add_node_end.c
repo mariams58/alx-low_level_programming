@@ -21,7 +21,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (*head);
 	}
 	while (new->next != NULL)
-		new = new->next;	
+		new = new->next;
 	new->next = r_head;
 	return (*head);
+	free(r_head->str);
+	free(r_head->next);
+	free(r_head);
 }
