@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 	int x, y, z = 0;
 	int (*f)(int, int) = get_op_func(argv[2]);
 
-	if (argc != 4 && strlen(argv[2]) != 1)
+	if (argc != 4 || strlen(argv[2]) != 1)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 	x = atoi(argv[1]);

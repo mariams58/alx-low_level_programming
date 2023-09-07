@@ -9,16 +9,18 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int i = 0;
-	int arr[32];
+	int arr[1024];
 
+	if (n >= ULONG_MAX)
+		n = ULONG_MAX;
 	if (n > 1)
 	{
-		while (n != 0 || i < index + 1)
+		while (n != 0)
 		{
 			if (n % 2 != 0)
 				arr[i] = 1;
 			else
-				arr[i] = 0;;
+				arr[i] = 0;
 			i++;
 			n = n / 2;
 		}

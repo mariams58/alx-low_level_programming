@@ -10,6 +10,8 @@ void print_binary(unsigned long int n)
 	unsigned long int num, bs, x = 1;
 	int y = 0;
 
+	if (n >= ULONG_MAX)
+		n = ULONG_MAX;
 	if (n > 1)
 	{
 		while (x * 2 <= n)
