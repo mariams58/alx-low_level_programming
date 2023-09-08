@@ -6,7 +6,7 @@
   *
   * Return: bit at index or -1
   */
-int clear_bit(unsigned long int *n, unsigned int index)
+int flip_bit(unsigned long int *n, unsigned int index)
 {
 	if (*n >= ULONG_MAX)
 		*n = ULONG_MAX;
