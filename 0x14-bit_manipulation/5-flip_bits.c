@@ -1,19 +1,25 @@
 #include "main.h"
 /**
-  * clear_bit - prints binary equivalent of given num at index
+  * flip_bits - prints binary equivalent of given num at index
   * @n: number given
-  * @index: index given
+  * @m: number given
   *
-  * Return: bit at index or -1
+  * Return: number of bits flipped
   */
-int flip_bit(unsigned long int *n, unsigned int index)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	if (*n >= ULONG_MAX)
-		*n = ULONG_MAX;
-	if ((*n ^ 1 << index) == 0)
+	unsigned int i = 0;
+	unsigned long int sub;
+
+	if (n >= ULONG_MAX)
+		n = ULONG_MAX;
+	if (m >= ULONG_MAX)
+		m = ULONG_MAX;
+	sub = n ^ m;
+	while (sub != 0)
 	{
-		*n = *n ^ 1 << index;
-		return (1);
+		sub = sub & (sub - 1);
+		i++;
 	}
-	return (-1);
+	return (i);
 }

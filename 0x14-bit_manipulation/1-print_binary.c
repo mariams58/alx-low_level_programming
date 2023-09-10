@@ -7,7 +7,7 @@
   */
 void print_binary(unsigned long int n)
 {
-	unsigned long int x, i = 0;
+	unsigned long int x, i = 1;
 	int y, a = 0;
 
 	if (n >= ULONG_MAX)
@@ -16,14 +16,16 @@ void print_binary(unsigned long int n)
 		_putchar(n + '0');
 	else
 	{
-		while (i <= n && a < 65)
+		while (i <= n && a < 63)
 		{
-			i = 1 << a;
+			i = i * 2;
 			a++;
 		}
-		for (y = a - 2; y >= 0 ; y--)
+		if (n > i)
+			a++;
+		for (y = a - 1; y >= 0 ; y--)
 		{
-			x = 1 & (n >> y);
+			x = (n >> y) & 1;
 			_putchar(x + '0');
 		}
 	}
