@@ -12,7 +12,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		*n = ULONG_MAX;
 	if (index <= 63)
 	{
-		if ((*n & (1 << index))!= 0)
+		if ((*n & (1 << index)) != 0)
 			*n = *n & ~(1 << index);
 		return (1);
 	}
