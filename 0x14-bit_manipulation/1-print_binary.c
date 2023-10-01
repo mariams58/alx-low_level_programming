@@ -5,17 +5,41 @@
   */
 void print_binary(unsigned long int n)
 {
-	int x = 1, i = 1;
+	unsigned int x = 1, num, b;
+	int i = 0;
 
-	if (n > 
-	if (n == 1 || n == 0)
-		_putchar(n + '0');
-	while (x <= n)
+	if (n >= ULONG_MAX)
+		n = ULONG_MAX;
+	if (n > 1)
 	{
-		x = x * 2;
-		i++;
+		while (x * 2 <= n)
+		{
+			x = 1 << i;
+			i++;
+		}
+		b = n - x;
+		_putchar(1 + '0');
+		if (b == 0)
+		{
+			for (i = i - 2; i != 0; i--)
+				_putchar(0 + '0');
+		}
+		else
+		{
+			i = i - 2;
+			for (; b != 0; i--)
+			{
+				num = 1 << i;
+				if (b >= num)
+				{
+					b = b - num;
+					_putchar(1 + '0');
+				}
+				else
+					_putchar(0 + '0');
+			}
+		}
 	}
-	b = n - x;
-	_putchar(1 + '0');
-	if (b > 0)
+	else
+		_putchar(n + '0');
 }
