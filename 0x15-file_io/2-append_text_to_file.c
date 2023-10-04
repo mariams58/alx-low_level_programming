@@ -1,19 +1,19 @@
 #include "main.h"
 /**
-  * create_file - creates a file
-  * @filename: name of the file to create
-  * @text_content: content to write ito the file
+  * append_text_to_file - append a text to a given file
+  * @filename: name of the file
+  * @text_content: text to append to file
   *
-  * Return: file descriptor
+  * Return: 1 for success and -1 for failure
   */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, x;
 	ssize_t wr;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_APPEND | O_WRONLY);
 	if (fd == -1)
 		return (-1);
 	if (text_content != NULL)
@@ -26,4 +26,5 @@ int create_file(const char *filename, char *text_content)
 	}
 	close(fd);
 	return (1);
+
 }
