@@ -14,7 +14,7 @@ int cl_fd(int f1)
 {
 	int i;
 
-	i = close(f1)
+	i = close(f1);
 	if (i == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
@@ -32,7 +32,7 @@ int cl_fd(int f1)
  */
 int main(int ac, char **av)
 {
-	int res, fd, fd1;
+	int res, fd, fd1, res1;
 	char buf[BUFSIZE];
 	ssize_t rd, wr;
 
