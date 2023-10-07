@@ -69,7 +69,7 @@ int main(int ac, char **av)
 	}
 	res = cl_fd(fd);
 	res1 = cl_fd(fd1);
-	if (res == -1 || res1 != -1)
+	if (res == -1 || res1 == -1)
 		exit(100);
 	return (0);
 }
