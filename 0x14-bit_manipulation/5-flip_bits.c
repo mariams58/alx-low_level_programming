@@ -6,7 +6,7 @@
   *
   * Return: number of bit needed tobe flipped
   */
-unsigned int flip_bits(unsigned long int n, unsigned int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int num = 0;
 	unsigned long int a;
@@ -20,5 +20,6 @@ unsigned int flip_bits(unsigned long int n, unsigned int m)
 	{
 		a = a & (a - 1);
 		num++;
+	}
 	return (num);
 }
