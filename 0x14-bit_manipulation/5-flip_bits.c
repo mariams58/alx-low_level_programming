@@ -11,8 +11,10 @@ unsigned int flip_bits(unsigned long int n, unsigned int m)
 	unsigned int num = 0;
 	unsigned long int a;
 
-	if (*n >= ULONG_MAX)
+	if (n >= ULONG_MAX)
 		n = ULONG_MAX;
+	if (m >= ULONG_MAX)
+		m = ULONG_MAX;
 	a = n ^ m;
 	while (a)
 	{
